@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "com/rui/economystore/mixin/PlayerEntityMixin": {
+      "defineSynchedData": "Lnet/minecraft/entity/player/PlayerEntity;func_70088_a()V"
+    }
+  },
+  "data": {
+    "searge": {
+      "com/rui/economystore/mixin/PlayerEntityMixin": {
+        "defineSynchedData": "Lnet/minecraft/entity/player/PlayerEntity;func_70088_a()V"
+      }
+    }
+  }
+}

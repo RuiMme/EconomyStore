@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "com.rui.economystore.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.8",
+  "refmap": "economystore.refmap.json",
+  "client": [
+  ],
+  "mixins": [
+    "PlayerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
