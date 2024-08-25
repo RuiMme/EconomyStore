@@ -1,13 +1,15 @@
 {
   "mappings": {
-    "com/rui/economystore/mixin/PlayerEntityMixin": {
-      "defineSynchedData": "Lnet/minecraft/entity/player/PlayerEntity;func_70088_a()V"
+    "com/rui/economystore/mixin/MinecraftClientMixin": {
+      "allowsMultiplayer": "Lnet/minecraft/client/Minecraft;func_238216_r_()Z",
+      "allowsChat": "Lnet/minecraft/client/Minecraft;func_238217_s_()Z"
     }
   },
   "data": {
     "searge": {
-      "com/rui/economystore/mixin/PlayerEntityMixin": {
-        "defineSynchedData": "Lnet/minecraft/entity/player/PlayerEntity;func_70088_a()V"
+      "com/rui/economystore/mixin/MinecraftClientMixin": {
+        "allowsMultiplayer": "Lnet/minecraft/client/Minecraft;func_238216_r_()Z",
+        "allowsChat": "Lnet/minecraft/client/Minecraft;func_238217_s_()Z"
       }
     }
   }

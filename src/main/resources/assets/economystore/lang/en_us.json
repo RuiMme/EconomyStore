@@ -1,5 +1,14 @@
 {
   "economystore.container.sale" : "Sale",
+  "economystore.container.buy" : "Buy",
+  "economystore.container.clear" : "Clear",
   "economystore.container.player" : "Player: ",
-  "economystore.container.money" : "Money:"
+  "economystore.container.player_money" : "Player Money: %s",
+  "economystore.container.discount_price" : "Discount: %s",
+  "economystore.container.pay" : "Payment amount: %s",
+  "economystore.container.money" : "Money:",
+  "economystore.container.to_item_store" : "Item Store",
+  "economystore.container.to_recycling_store" : "Recycling Store",
+  "economystore.container.close" : "x"
+
 }

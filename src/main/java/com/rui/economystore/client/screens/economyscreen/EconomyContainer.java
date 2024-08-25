@@ -1,5 +1,6 @@
 package com.rui.economystore.client.screens.economyscreen;
 
+import com.rui.economystore.common.init.ContainerInit;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
@@ -9,14 +10,14 @@ import net.minecraft.util.IWorldPosCallable;
 
 public class EconomyContainer extends Container {
     private final IWorldPosCallable access;
-    public EconomyContainer(PlayerInventory playerInventory) {
-        this(playerInventory,IWorldPosCallable.NULL);
+    public EconomyContainer(int id, PlayerInventory playerInventory) {
+        this(id, playerInventory,IWorldPosCallable.NULL);
     }
-    public EconomyContainer(int i, PlayerInventory playerInventory, PacketBuffer packetBuffer) {
-        this(playerInventory,IWorldPosCallable.NULL);
+    public EconomyContainer(int id, PlayerInventory playerInventory, PacketBuffer packetBuffer) {
+        this(id, playerInventory,IWorldPosCallable.NULL);
     }
-    public EconomyContainer(PlayerInventory playerInventory, IWorldPosCallable worldPosCallable) {
-        super(null, 0);
+    public EconomyContainer(int id, PlayerInventory playerInventory, IWorldPosCallable worldPosCallable) {
+        super(ContainerInit.ECONOMY_CONTAINER.get(), id);
         this.access = worldPosCallable;
     }
 

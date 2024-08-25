@@ -7,17 +7,14 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import javax.annotation.Nullable;
-
-@Mod.EventBusSubscriber(modid = LibMisc.MOD_ID)
+@Mod.EventBusSubscriber(modid = LibMisc.MOD_ID, value = Dist.CLIENT)
 public class ModGuiEvent {
 
-    @OnlyIn(Dist.CLIENT)
+//    @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
     public static void Keyboard(InputEvent.KeyInputEvent event) {
         Minecraft mc = Minecraft.getInstance();

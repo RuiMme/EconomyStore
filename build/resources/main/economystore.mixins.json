@@ -5,9 +5,9 @@
   "minVersion": "0.8",
   "refmap": "economystore.refmap.json",
   "client": [
+    "MinecraftClientMixin"
   ],
   "mixins": [
-    "PlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

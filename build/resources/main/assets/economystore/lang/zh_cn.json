@@ -1,5 +1,14 @@
 {
   "economystore.container.sale" : "出售",
+  "economystore.container.buy" : "购买",
+  "economystore.container.clear" : "清除",
   "economystore.container.player" : "玩家: ",
-  "economystore.container.money" : "拥有金钱:"
+  "economystore.container.player_money" : "拥有金钱: %s",
+  "economystore.container.discount_price" : "折扣: %s",
+  "economystore.container.pay" : "支付金额: %s",
+  "economystore.container.money" : "拥有金钱:",
+  "economystore.container.to_item_store" : "物品商店",
+  "economystore.container.to_recycling_store" : "回收商店",
+  "economystore.container.close" : "x"
+
 }

@@ -1,12 +1,11 @@
 package com.rui.economystore.api.network;
 
 import com.rui.economystore.api.network.handler.client.PacketSyncClientHandler;
-import com.rui.economystore.api.network.handler.server.PacketSyncServerHandler;
+import com.rui.economystore.api.network.handler.server.*;
 import com.rui.economystore.api.network.messages.client.StatEconomySyncClientMessage;
 import com.rui.economystore.api.network.messages.server.StatEconomySyncServerMessage;
 import com.rui.economystore.api.stat.StatBase;
 import com.rui.economystore.api.stat.Stats;
-import com.rui.economystore.api.stat.stats.StatEconomy;
 import com.rui.economystore.libs.LibMisc;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.util.ResourceLocation;
@@ -28,6 +27,15 @@ public class PacketHandler {
 
     public static void init() {
         int id = 0;
+        // open menu
+        HANDLER.registerMessage(id++, OpenRecyclingStoreContainerHandler.class, OpenRecyclingStoreContainerHandler::encode, OpenRecyclingStoreContainerHandler::decode, OpenRecyclingStoreContainerHandler::handle);
+        HANDLER.registerMessage(id++, OpenItemStoreContainerHandler.class, OpenItemStoreContainerHandler::encode, OpenItemStoreContainerHandler::decode, OpenItemStoreContainerHandler::handle);
+        // select store item
+        HANDLER.registerMessage(id++, SelectStoreItemHandler.class, SelectStoreItemHandler::encode, SelectStoreItemHandler::decode, SelectStoreItemHandler::handle);
+        // sell or buy item store item
+        HANDLER.registerMessage(id++, SellItemInStoreHandler.class, SellItemInStoreHandler::encode, SellItemInStoreHandler::decode, SellItemInStoreHandler::handle);
+        HANDLER.registerMessage(id++, BuyItemInStoreHandler.class, BuyItemInStoreHandler::encode, BuyItemInStoreHandler::decode, BuyItemInStoreHandler::handle);
+
         // sync client economy
         HANDLER.registerMessage(id++, StatEconomySyncClientMessage.class, StatEconomySyncClientMessage::writeBytes,
                 buffer -> { StatEconomySyncClientMessage message = new StatEconomySyncClientMessage();message.readBytes(buffer);return message;},
